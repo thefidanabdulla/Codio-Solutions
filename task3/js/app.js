@@ -1,4 +1,3 @@
-
 const testArray = [
     { type: 'A', value: 'Tesla' },
     { type: 'A', value: 'GMC' },
@@ -7,21 +6,21 @@ const testArray = [
     { type: 'C', value: 'Ford' }
 ]
 
+
+
 let newArray = [];
 
-testArray.forEach((arrayItem, index) => {
+testArray.forEach((arrayItem) => {
     let i = 0;
     let testObj = [];
     for (i; i < testArray.length; i++) {
-
-        if (i !== index && testArray[i].type === arrayItem.type) {
-            testObj.push(arrayItem.value, testArray[i].value)
+        if ( testArray[i].type === arrayItem.type) {
+            testObj.push( testArray[i].value)
         }
     }
-
     newArray.push({ ...arrayItem, value: testObj })
-
 })
+
 
 function filterNewArray(nwArr){
     var resultArray = [];
@@ -34,6 +33,7 @@ function filterNewArray(nwArr){
     
     return resultArray;
 }
+
 
 console.log(filterNewArray(newArray))
 
