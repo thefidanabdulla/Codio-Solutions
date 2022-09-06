@@ -25,6 +25,6 @@ function prefix(prefixArray) {
     
 }
 
-prefix(testArray)
+prefix(testArray);
 
 
