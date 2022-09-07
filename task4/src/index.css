@@ -15,6 +15,9 @@
 .app__currency {
   width: 685px;
   max-width: 685px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .app__currency-header {
   width: 100%;
@@ -38,9 +41,100 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("./Assets/selectArrowIcon.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 22px;
+}
+
+.app__currency-header option{
+  display: block;
+  padding: 20px;
 }
 .app__currency-header button {
   background: transparent;
   cursor: pointer;
   border: none;
 }
+
+.app__currency_amount {
+  padding: 22px 35px 45px;
+  box-shadow: 3px 3px 10px rgba(14, 87, 214, 0.26);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+}
+.app__currency_amount h1 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.app__currency_amount form {
+  display: flex;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.app__currency_amount form button,
+.app__currency_amount form input {
+  border: none;
+  outline: none;
+}
+.app__currency_amount form input {
+  width: 100%;
+  padding: 18px 20px;
+  background: #f2f2f2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.app__currency_amount form button {
+  padding: 17px 39px;
+  background: #fff;
+  cursor: pointer;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.app__currency_amount div {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+.app__currency-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.app__currency-body-item{
+  width: 100%;
+  box-shadow: 3px 3px 10px rgba(14, 87, 214, 0.26);
+  padding: 22px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+.app__currency-body-item-left{
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+
