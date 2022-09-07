@@ -1,6 +1,46 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "Roboto", sans-serif;
+}
+.app__app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__currency {
+  width: 685px;
+  max-width: 685px;
+}
+.app__currency-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.app__currency-header select {
+  width: 3110px;
+  height: 52px;
+  box-shadow: 3px 3px 10px rgba(14, 87, 214, 0.26);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+.app__currency-header button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
 }

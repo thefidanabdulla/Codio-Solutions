@@ -1,9 +1,10 @@
+import Currency from "./components/currency/Currency";
 
 
 function App() {
   return (
-    <div className="">
-      Hello World
+    <div className="app__app">
+      <Currency />
     </div>
   );
 }
