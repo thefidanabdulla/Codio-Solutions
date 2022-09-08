@@ -13,21 +13,21 @@ const Currency = () => {
   myHeaders.append("apikey", "IlrzpboH0GQJpbis4goCcvfJRPXefbWf");
 
   // const fromCurrencyFunc = (base = "USD") => {
-    let requestOptions = {
-      method: "GET",
-      redirect: "follow",
-      headers: myHeaders,
-    };
-    fetch(
-      `https://api.apilayer.com/exchangerates_data/latest?base=USD`,
-      requestOptions
+  let requestOptions = {
+    method: "GET",
+    redirect: "follow",
+    headers: myHeaders,
+  };
+  fetch(
+    `https://api.apilayer.com/exchangerates_data/latest?base=USD`,
+    requestOptions
+  )
+    .then((response) => response.json())
+    .then(
+      (result) => setFromCurrencies([result.base, ...Object.keys(result.rates)])
+      // console.log(result)
     )
-      .then((response) => response.json())
-      .then((result) =>
-        setFromCurrencies([result.base, ...Object.keys(result.rates)])
-        // console.log(result)
-      )
-      .catch((error) => console.log("error", error));
+    .catch((error) => console.log("error", error));
   // };
   // fromCurrencyFunc('USD')
   console.log(fromCurrencies);
@@ -38,6 +38,11 @@ const Currency = () => {
           {/* {fromCurrencies("USD")?.rates.map((rate) => (
             <option value={'rate[0]'}>{rate}</option>
           ))} */}
+          <option value={""}>USD</option>
+          <option value={""}>AZN</option>
+          <option value={""}>USD</option>
+          <option value={""}>AZN</option>
+          <option value={""}>USD</option>
         </select>
         <button>
           <img src={exchangeIcon} alt="exchange icon" />
@@ -46,6 +51,13 @@ const Currency = () => {
           {/* {fromCurrencies("AZN")?.rates.map((rate) => (
             <option value={''}>{rate}</option>
           ))} */}
+          <option value={""}>USD</option>
+          <option value={""}>AZN</option>
+          <option value={""}>USD</option>
+          <option value={""}>AZN</option>
+          <option value={""}>USD</option>
+          <option value={""}>AZN</option>
+          <option value={""}>USD</option>
         </select>
       </div>
       <div className="app__currency_amount">
